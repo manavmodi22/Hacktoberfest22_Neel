@@ -40,6 +40,32 @@ h4 {
   }
 }
 
+.final {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  text-align: center;
+}
+
+.final.show {
+  transform: translate(-50%, -50%) scale(1);
+  animation: show 0.2s ease-out;
+}
+
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  30% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
 
 .nums {
   color: #3498db;
@@ -99,24 +125,6 @@ h4 {
   }
 }
 
-#replay{
-  background-color: #3498db;
-  border-radius: 3px;
-  border: none;
-  color: aliceblue;
-  padding: 5px;
-  text-align: center;
-  display: inline-block;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-#replay span{
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.3s;
-}
 
 #replay span:after{
   content: '\00bb';
